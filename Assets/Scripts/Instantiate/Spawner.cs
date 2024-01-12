@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Spawner : MonoBehaviour{
+    public GameObject target;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start(){
+        //Instantiate는 유니티에 내장되어 있는 함수
+        Instantiate(target);
     }
 }
