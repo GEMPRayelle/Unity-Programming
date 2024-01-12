@@ -18,17 +18,17 @@ public class Spawner : MonoBehaviour{
 
 인스턴스화 시킬 3D 오브젝트인 Sphere를 생성한다. 그리고 생성한 Ball을 target에 넣어준다
 
-![image1](Instantiate/images/image1.png)
+![image1](images/image1.png)
 
 그러면 게임을 시작할때 Ball이 하나 더 생성되서 Scene상에서는 2개의 공이 생기게된다
 
-![image2](Instantiate/images/image2.png)
+![image2](images/image2.png)
 
 보통 Instantiate를 할 때는 Scene상에 이미 존재하는 게임 오브젝트를 대상으로 하진 않는다
 
 아래처럼 게임 오브젝트를 미리 만들어 놓고 편할때마다 쓸 수 있는 프리팹을 사용하여 생성한다
 
-![image3](Instantiate/images/image3.png)
+![image3](images/image3.png)
 
 # 인스턴스화 응용
 앞서 작성한 코드를 수정할 수 있는데 Instantiate를 할 때 위치화 회전을 원하는 곳으로 옵션을 줄 수 있다
@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour{
 
 Hierarchy창에서 새로 빈오브젝트인 SpawnPosition를 만들고 그 위치에 Ball을 옮기게 할 수 있다
 
-![image4](Instantiate/images/image4.png)
+![image4](images/image4.png)
 
 Instantiate는 새로 찍어낸 게임 오브젝트를 리턴 값으로 전달하는데 이 `target`을 기반으로 생성한 클론을 = 통해서 가져올수도있다
 ```cs
