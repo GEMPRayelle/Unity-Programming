@@ -125,7 +125,7 @@ void Update(){
 
 * `yield null` : return 뒤에는 대기시간을 지정할 수 있는데 대기 시간에 대한 데이터를 주지 않아도 된다
 
-null이라고 하면 그 코루틴은 한 프레임을 쉬게 된다 (1/60)
+null이라고 하면 그 코루틴은 한 프레임을 쉬게 된다 (1/60초)
 ```cs
 IEnumerator HelloUnity(){
     while(true){
