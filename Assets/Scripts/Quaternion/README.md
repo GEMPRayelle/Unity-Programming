@@ -1,6 +1,6 @@
 # (Unity) 회전과 쿼터니언
 
-![image1](Quaternion/images/image1.png)
+![image1](images/image1.png)
 
 유니티에서는 Inspector창에서 Rotation값을 수정하면서 각각의 축에서 회전하게 만들 수 있다
 
@@ -20,7 +20,7 @@ public class SetRotation : MonoBehaviour{
 실제 코드상에서도 `Vector3`를 사용하여 회전을 지정해주면 에러가 나오게 되는데.
 그 이유는 rotation은 Vector3로 알고있지만 사실은 아니고 Quaternion이라고 되어있다
 
-![image2](Quaternion/images/image2.png)
+![image2](images/image2.png)
 
 # (?) 왜 Vector3로는 안되고 Quaternion을 사용해야할까?
 Vector3를 쿼터니언으로서 rotation에 넣어보겠다
@@ -38,8 +38,8 @@ public class SetRotation : MonoBehaviour{
 Euler는 x, y, z Vector3를 통해서 공간의 회전을 표시할 수 있도록 체계를 만든 수학자 이름이다.
 x, y, z를 통해서 물체의 회전을 표시할 수 있는 체계(세 개의 각도)를 오일러 각이라고 하는데
 
-![image3](Quaternion/images/image3.png)
-![image3](Quaternion/images/image4.png)
+![image3](images/image3.png)
+![image3](images/image4.png)
 
 이 큐브처럼 처음에 회전각도에서 y축으로 90도 회전을하게 되면 오른쪽큐브처럼 회전을하게되는데 물체가 회전을 하지만 좌표축도 같이 회전하는걸 볼 수 있다.
 
