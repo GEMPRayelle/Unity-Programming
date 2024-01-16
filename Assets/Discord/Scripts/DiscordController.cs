@@ -46,7 +46,7 @@ public class DiscordController
     public static void UpdateActivity(){
         ActivityManager activityManager = discord.GetActivityManager();
         Activity activity = new Activity(){
-            Details = "Editing" + projectName,
+            Details = "Editing " + projectName,
             State = activeSceneName + " | " + platform,
             Timestamps = { Start = lastTimestamp },
             Assets = 
