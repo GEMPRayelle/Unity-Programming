@@ -66,3 +66,9 @@ Plane Distance는 메인 카메라로부터 100m 떨어진 거리에 UI요소가
 
   그래서 다른 방식과달리 3D 오브젝트로 취급을 하기에 UI요소를 마음대로 회전하고 배치할 수 있다
   이 방식은 증강현실 UI를 구현할 때 사용할 수 있다
+
+
+# (UGUI) Anchor Pivot Position
+* Anchor: UI요소들이 원점의 위치가 어디서 시작되는지를 결정한다  
+* Pivot: UI요소 내부에 UI요소를 배치할때 필요한 핀 포인트를 결정한다  
+* Position: Anchor랑 Pivot 기준으로 결정한 좌표
