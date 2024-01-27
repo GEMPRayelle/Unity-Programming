@@ -68,7 +68,53 @@ Plane Distance는 메인 카메라로부터 100m 떨어진 거리에 UI요소가
   이 방식은 증강현실 UI를 구현할 때 사용할 수 있다
 
 
+
 # (UGUI) Anchor Pivot Position
 * Anchor: UI요소들이 원점의 위치가 어디서 시작되는지를 결정한다  
 * Pivot: UI요소 내부에 UI요소를 배치할때 필요한 핀 포인트를 결정한다  
 * Position: Anchor랑 Pivot 기준으로 결정한 좌표
+
+![image9](images/image9.png)
+
+만약 다음과같이 파란색화면이 UI요소를 담은 캔버스(스크린) 이라고 하고 초록색 UI요소가 있다고 할 때  
+`Anchor`같은 경우는 초록색 UI요소의 0,0이 어디서 시작하는지 결정하는데 어떤 UI요소의 Anchor를 결정하려면 그 UI를 가지고있는 프레임을 봐야한다 
+
+![image10](images/image10.png)
+
+초록색UI입장에서 자기 자신을 가지고있는 프레임에 대한 앵커 값은 위그림과같은 형태로 된다
+
+![image11](images/image11.png)
+
+이 상태에서 초록색UI의 Anchor 값을 (0.5, 0,5) 라고 가정하면 이 상태에서 UI요소의 위치를 원점으로 0,0으로 보내게되면  
+
+![image12](images/image12.png)
+
+UI요소는 정중앙에 위치하게 된다, Anchor값은 UI요소의 원점이 어디서 시작하는지 결정하기 때문이다
+
+![image13](images/image13.png)
+
+만약 UI요소의 Anchor 값을 0,0으로 하고 position을 0,0으로 하게된다면 UI요소는 좌측하단에서 시작하게 될 것이다.
+
+`Pivot`같은 경우는 어떤 UI요소의 Anchor 값이 (0.5, 0.5) position 값이 (0, 0)으로 되어있다고 생각할때  
+UI요소는 빨간색점에 배치가 된다 
+
+![image14](images/image14.png)
+ 
+이상태에서 `Pivot`은 UI요소내부의 기준점이다 그래서 보통 기본 Pivot값은 (0.5, 0,5)라서 자기 자신의 정중앙이 된다  
+
+![image15](images/image15.png)
+
+Pivot은 Anchor와 달리 자기자신을 기준으로하기에 자신의 좌측 하단이 0,0 우측 상단이 1,1이 된다  
+> 만약 UI의 Pivot값을 0,0으로 바꾼다면?
+
+![image16](images/image16.png)
+
+이렇게 된다 이 UI요소는 똑같은 position 0,0에 배치를 해도 자기 자신의 좌측 하단을 핀 포인트로 삼는다  
+즉 position과 Anchor값이 변하지는 않았고 스스로 내부에 있는 자기 자신을 배치하는 기준점이 옮겨졌을뿐이다  
+
+`Position`같은 경우는 결국 Anchor랑 Pivot에 의해서 최종적으로 결정되는 좌표라고 보면된다.  
+Position이 똑같아도 Anchor랑 Pivot이 다르면 전혀 다른 곳에 배치될 수 있다.  
+
+
+
+
